@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>d2j - Connection page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="#">
+        <img src="./assets/img/logo.png" alt="Logo">
+      </a>
+    </div>
+  </header>
+  <div class="selector-container">
+    <button id="test-connection-btn" class="selector-btn">Test database connection</button>
+    <button id="connect-db-btn" class="selector-btn">Connect to the database</button>
+  </div>
+  <div id="selector-result" class="result">
+    <p id="default-text" style="text-align: center;">
+      Please select an option before start.....
+    </p>
+
+    <div class="container" id="container" style="display: none;">
+      <div class="form-container">
+        <h2 id="mode-title"></h2>
+        <form id="db-form">
+          <div class="input-group">
+            <label for="host">Host:</label>
+            <input type="text" id="host" name="host" required>
+          </div>
+          <div class="input-group">
+            <label for="port">Port:</label>
+            <input type="number" id="port" name="port" required>
+          </div>
+          <div class="input-group">
+            <label for="databaseName">Database Name:</label>
+            <input type="text" id="dbname" name="databaseName" required>
+          </div>
+          <div class="input-group">
+            <div id="auth-text">&gt; Authorization: </div>
+            <div id="auth-fields" style="display: none;">
+              <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+              </div>
+
+              <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+              </div>
+              <div class="input-group">
+                <label for="sslModeEnabled" class="toggle-label">SSL Enabled</label>
+                <input type="checkbox" id="ssl" name="sslModeEnabled" class="toggle-checkbox">
+                <div class="toggle-container">
+                  <div class="toggle-handle"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="input-group" id="session-time">
+            <label for="session-time">Session Time:</label>
+            <select id="session-time-selector">
+              <option value="1m">1 minute</option>
+              <option value="5m">5 minutes</option>
+              <option value="20m">20 minutes</option>
+              <option value="30m">30 minutes</option>
+              <option value="1h">1 hour</option>
+            </select>
+          </div>
+          <button type="submit" class="test-connection-btn" id="submit-btn"></button>
+        </form>
+      </div>
+      <div class="result-container">
+        <h2>Result:</h2>
+        <div id="result-text"></div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="left-content">
+      <a href="#">
+        <img src="./assets/img/logo.png" alt="Logo">
+      </a>
+      <p>All rights reserved</p>
+    </div>
+    <div class="right-content">
+      <ul>
+        <li><a href="#">Social Media</a></li>
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">Author LinkedIn</a></li>
+        <li><a href="#">Issue Tracker</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="./assets/js/styles.js"></script>
+</body>
+
+</html>
